@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitLife — Наши тренеры</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">🏋️ FitLife</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="trainers.html" class="active">Тренеры</a></li>
+          <li><a href="#schedule">Расписание</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Раздел: Тренеры -->
+  <section id="trainers" class="trainers page">
+    <div class="container">
+      <h2 class="section-title">Наши <span>тренеры</span></h2>
+      <div class="trainer-grid">
+
+        <div class="trainer-card">
+          <img src="images\алексей.jpeg" alt="Тренер Алексей">
+          <h3>Алексей Морозов</h3>
+          <p>Силовые тренировки и бодибилдинг. Более 8 лет опыта работы с клиентами любого уровня подготовки.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-vk"></i></a>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <img src="images/мария.jpg" alt="Тренер Мария">
+          <h3>Мария Соколова</h3>
+          <p>Функциональные тренировки и фитнес для женщин. Автор авторской методики FitGirl.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-vk"></i></a>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <img src="images/вторая.jpg" alt="Тренер Ирина">
+          <h3>Ирина Новикова</h3>
+          <p>Йога, пилатес и стретчинг. Поможет обрести баланс между телом и разумом.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-vk"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Раздел: Расписание -->
+  <section id="schedule" class="schedule">
+  <div class="container">
+    <h2 class="section-title">Наше <span>расписание</span></h2>
+    <div class="table-wrapper">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>День</th>
+            <th>Утро</th>
+            <th>День</th>
+            <th>Вечер</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Понедельник</td>
+            <td>Йога — 8:00</td>
+            <td>Функциональный тренинг — 13:00</td>
+            <td>Силовая — 19:00</td>
+          </tr>
+          <tr>
+            <td>Среда</td>
+            <td>Пилатес — 9:00</td>
+            <td>Бокс — 15:00</td>
+            <td>Кроссфит — 20:00</td>
+          </tr>
+          <tr>
+            <td>Пятница</td>
+            <td>Кардио — 8:30</td>
+            <td>Йога — 12:00</td>
+            <td>Танцевальный фитнес — 19:30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Контакты -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Связаться с <span>нами</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Спорт, 10</p>
+          <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+          <p><i class="fas fa-envelope"></i> info@fitlife.ru</p>
+        </div>
+        <div class="contact-form">
+          <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+            <button type="submit" class="btn">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 FitLife — будь в форме каждый день</p>
+      <p><a href="index.html" class="back-link">← На главную</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
