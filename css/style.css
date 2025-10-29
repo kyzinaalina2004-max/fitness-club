@@ -12,6 +12,12 @@ body {
   line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ===================== Шапка ===================== */
 .header {
   background: #111;
@@ -26,6 +32,9 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -34,7 +43,7 @@ body {
 }
 
 nav {
-  float: right;
+  position: relative;
 }
 
 .nav-links {
@@ -56,7 +65,7 @@ nav {
 /* ===================== Гамбургер ===================== */
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
   color: #fff;
 }
@@ -260,9 +269,13 @@ nav {
 
   .feature-grid, .gallery-grid, .trainer-grid, .contact-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .hero { height: 60vh; padding: 20px; }
+  .contact-form input, .contact-form textarea, .contact-form button { width: 100%; }
+}
+20px; }
   .contact-form input, .contact-form textarea, .contact-form button { width: 100%; }
 }
 
