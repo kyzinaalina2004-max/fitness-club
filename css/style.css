@@ -448,6 +448,80 @@ body {
     padding: 8px;
   }
 }
+/* =============================== */
+/*       МОБИЛЬНАЯ ОПТИМИЗАЦИЯ    */
+/* =============================== */
+
+/* Убираем горизонтальную прокрутку */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Исправляем сетки, чтобы не выходили за экран */
+.container {
+  max-width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Улучшение отображения Hero на телефоне */
+.hero {
+  background-attachment: scroll; /* убираем fixed на мобилках */
+  background-size: cover;
+  height: 90vh;
+}
+
+/* Уменьшаем шрифты в hero */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Фикс галереи: равномерные картинки, не вылазят */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Тренеры на телефоне в одну колонку */
+@media (max-width: 600px) {
+  .trainer-grid {
+    grid-template-columns: 1fr;
+  }
+  .trainer-card img {
+    height: auto;
+  }
+}
+
+/* Контактная форма адаптивнее */
+@media (max-width: 600px) {
+  .contact-form button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Таблицы (если будут) не ломают верстку */
+.schedule .table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
 
 
 
