@@ -194,10 +194,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+});
+</script>
 
 
 </body>
 </html>
+
 
 
 
