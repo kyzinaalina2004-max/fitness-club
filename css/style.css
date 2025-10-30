@@ -331,6 +331,113 @@ body {
     margin-right: 10px;    /* отступ от края */
   }
 }
+/* ... твои предыдущие стили ... */
+
+/* ================================= */
+/*         АДАПТИВНЫЙ МЕНЮ           */
+/* ================================= */
+
+/* твои стили для меню */
+
+/* ================================= */
+/*        ДРУГИЕ СЕКЦИИ              */
+/* ================================= */
+
+/* твои стили для галереи, тренеров и т.д. */
+
+/* ================================= */
+/*        НОВЫЙ БЛОК ЗАПИСИ          */
+/* ================================= */
+.signup {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.signup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.signup-info {
+  text-align: left;
+}
+
+.signup-info p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.signup-details {
+  list-style: none;
+  padding: 0;
+}
+
+.signup-details li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+
+.signup-details li i {
+  color: #f39c12;
+  font-size: 1.2rem;
+}
+
+.signup-form form {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.9rem 1rem 0.9rem 3rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #f39c12;
+  box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f39c12;
+  font-size: 1.2rem;
+}
+
+.signup-form button {
+  padding: 1rem 2rem;
+  background: #f39c
+
 
 
 
