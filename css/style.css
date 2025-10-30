@@ -6,12 +6,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #222;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* ================================= */
@@ -49,7 +51,6 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
 }
 
 .nav-links a:hover,
@@ -62,9 +63,8 @@ body {
 /* ================================= */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   background: url('https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  background-attachment: fixed; /* параллакс эффект */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,27 +72,12 @@ body {
   color: #fff;
 }
 
-/* затемнение фона */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.45); /* полупрозрачная подложка */
+  background-color: rgba(0, 0, 0, 0.45);
   z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1; /* поверх подложки */
-  max-width: 700px;
-  padding: 2rem;
-  animation: fadeInUp 1.2s ease-out forwards;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
 }
 
 .hero-content {
@@ -100,37 +85,6 @@ body {
   z-index: 1;
   max-width: 700px;
   padding: 2rem;
-  animation: fadeInUp 1.2s ease-out forwards;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero h2 span {
-  color: #f39c12;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.btn {
-  display: inline-block;
-  background: #f39c12;
-  color: #fff;
-  padding: 0.9rem 1.8rem;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: #d35400;
-  transform: scale(1.1);
 }
 
 /* ================================= */
@@ -162,29 +116,7 @@ body {
   background: #fff;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.feature-icon {
-  font-size: 2.5rem;
-  color: #f39c12;
-  margin-bottom: 1rem;
-}
-
-.feature h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-}
-
-.feature p {
-  font-size: 1rem;
-  color: #555;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* ================================= */
@@ -196,37 +128,24 @@ body {
   text-align: center;
 }
 
-.gallery .section-title {
-  margin-bottom: 2.5rem;
-  font-weight: 700;
-}
-
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
 }
 
 .gallery-item {
+  width: 100%;
+  height: 200px;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  border-radius: 10px;
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
+  object-fit: cover; /* растягиваем под контейнер */
+  display: block;
 }
 
 /* ================================= */
@@ -241,57 +160,20 @@ body {
 .trainer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 20px;
 }
 
 .trainer-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.trainer-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: #fff;
 }
 
 .trainer-card img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
-}
-
-.trainer-card h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.3rem;
-  color: #111;
-}
-
-.trainer-card p {
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding-bottom: 1rem;
-}
-
-.social a {
-  color: #f39c12;
-  font-size: 1.3rem;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.social a:hover {
-  color: #d35400;
-  transform: scale(1.2);
 }
 
 /* ================================= */
@@ -306,50 +188,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
-}
-
-.contact-info p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #555;
-}
-
-.contact-info i {
-  color: #f39c12;
-  margin-right: 10px;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  width: 100%;
-}
-
-.contact-form button {
-  align-self: flex-start;
-  padding: 0.9rem 2rem;
-  border: none;
-  border-radius: 30px;
-  background: #f39c12;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.contact-form button:hover {
-  background: #d35400;
-  transform: scale(1.05);
 }
 
 /* ================================= */
@@ -360,250 +198,30 @@ body {
   color: #fff;
   text-align: center;
   padding: 2rem 0;
-  margin-top: 2rem;
-}
-
-.footer p {
-  margin: 0.3rem 0;
 }
 
 /* ================================= */
 /*        АДАПТИВНОСТЬ              */
 /* ================================= */
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .trainer-card img {
-    height: 250px;
-  }
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero {
-    background-attachment: scroll; /* отключаем параллакс на мобильных */
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ================================= */
-/*        АНИМАЦИИ ПРИ СКРОЛЛЕ      */
-/* ================================= */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.3s;
-}
-
-.fade-in-delay-1 { animation-delay: 0.3s; }
-.fade-in-delay-2 { animation-delay: 0.6s; }
-.fade-in-delay-3 { animation-delay: 0.9s; }
-/* Стили для расписания */
-.schedule .table-wrapper {
-  overflow-x: auto; /* Горизонтальная прокрутка на мобильных */
-  margin-top: 20px;
-}
-
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  min-width: 600px; /* Чтобы таблица не сломалась на больших экранах */
-}
-
-.schedule-table th, .schedule-table td {
-  padding: 12px;
-  border: 1px solid #ddd;
-}
-
-.schedule-table th {
-  background-color: #222;
-  color: #fff;
-  font-weight: 600;
-}
-
-.schedule-table tbody tr:nth-child(even) {
-  background-color: #f4f4f4;
-}
-
-@media (max-width: 768px) {
-  .schedule-table th, .schedule-table td {
-    padding: 8px;
-  }
-}
-/* =============================== */
-/*       МОБИЛЬНАЯ ОПТИМИЗАЦИЯ    */
-/* =============================== */
-
-/* Убираем горизонтальную прокрутку */
-html, body {
-  overflow-x: hidden;
-}
-
-/* Исправляем сетки, чтобы не выходили за экран */
-.container {
-  max-width: 100%;
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-
-/* Улучшение отображения Hero на телефоне */
-.hero {
-  background-attachment: scroll; /* убираем fixed на мобилках */
-  background-size: cover;
-  height: 90vh;
-}
-
-/* Уменьшаем шрифты в hero */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .btn {
-    padding: 0.7rem 1.4rem;
-    font-size: 0.95rem;
-  }
-}
-
-/* Фикс галереи: равномерные картинки, не вылазят */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Тренеры на телефоне в одну колонку */
-@media (max-width: 600px) {
-  .trainer-grid {
-    grid-template-columns: 1fr;
-  }
-  .trainer-card img {
-    height: auto;
-  }
-}
-
-/* Контактная форма адаптивнее */
-@media (max-width: 600px) {
-  .contact-form button {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Таблицы (если будут) не ломают верстку */
-.schedule .table-wrapper {
-  overflow-x: auto;
-  width: 100%;
-}
-/* =============================== */
-/*     АДАПТИВНОЕ МЕНЮ (МОБИЛЬНОЕ) */
-/* =============================== */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background-color: #111;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    display: none; /* скрыто по умолчанию */
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .nav-links.show {
-    display: flex; /* показываем, когда нажата кнопка */
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  /* Кнопка-бургер */
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.6rem;
-    color: #fff;
-  }
-
-  nav {
-    position: relative;
-  }
-}
-
-/* На больших экранах бургер скрыт */
-.menu-toggle {
-  display: none;
-}
-
-/* ============================== */
-/*    Мобильное меню (бургер)    */
-/* ============================== */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+@media(max-width: 768px) {
+  .hero h2 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  .btn { padding: 0.7rem 1.4rem; font-size: 0.95rem; }
 
   .nav-links {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 70px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    background: rgba(0,0,0,0.9);
     padding: 20px;
     border-radius: 10px;
   }
 
-  .nav-links.show {
-    display: flex;
-  }
+  .nav-links.show { display: flex; }
 
-  .nav-links a {
-    color: #fff;
-    font-size: 1.1rem;
-  }
-
-  .header .container {
-    position: relative;
-  }
+  .menu-toggle { display: block; cursor: pointer; font-size: 1.8rem; color: #fff; }
 }
 
 
