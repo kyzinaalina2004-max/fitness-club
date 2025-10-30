@@ -36,7 +36,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h2>Добро пожаловать в <span>FitLife</span></h2>
-      <p>Твоя энергия. Твоя сила. Твоя лучшая версия начинается здесь.</p>
+     <p id="dynamic-slogan">Твоя энергия.</p>
       <a href="#contact" class="btn">Записаться сейчас</a>
     </div>
   </section>
@@ -165,9 +165,32 @@
       });
     });
   </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const slogans = [
+    "Твоя энергия.",
+    "Твоя сила.",
+    "Твоя лучшая версия.",
+    "Начни сегодня!"
+  ];
+
+  const sloganEl = document.getElementById("dynamic-slogan");
+  let index = 0;
+
+  setInterval(() => {
+    sloganEl.style.opacity = 0; // исчезание
+    setTimeout(() => {
+      sloganEl.textContent = slogans[index];
+      sloganEl.style.opacity = 1; // появление
+      index = (index + 1) % slogans.length;
+    }, 500); // совпадает с transition
+  }, 3000); // смена каждые 3 секунды
+});
+</script>
 
 </body>
 </html>
+
 
 
 
