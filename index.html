@@ -119,28 +119,49 @@
   </section>
 
   <!-- Контакты -->
- <section id="contact" class="contact">
+<section id="signup" class="signup">
   <div class="container">
-    <h2 class="section-title fade-in">Связаться с <span>нами</span></h2>
-    <div class="contact-grid">
-      <!-- Левая часть: инфо -->
-      <div class="contact-info fade-in fade-in-delay-1">
-        <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Спорт, 10</p>
-        <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
-        <p><i class="fas fa-envelope"></i> info@fitlife.ru</p>
+    <h2 class="section-title fade-in">Запишись на <span>тренировку</span></h2>
+    
+    <div class="signup-grid">
+
+      <!-- Левая часть: информация -->
+      <div class="signup-info fade-in fade-in-delay-1">
+        <p>Оставь свои данные, и наш тренер свяжется с тобой в течение 24 часов.</p>
+        <ul class="signup-details">
+          <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Спорт, д. 10</li>
+          <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+          <li><i class="fas fa-envelope"></i> info@fitlife.ru</li>
+        </ul>
       </div>
+
       <!-- Правая часть: форма -->
-      <div class="contact-form fade-in fade-in-delay-2">
+      <div class="signup-form fade-in fade-in-delay-2">
         <form>
-          <input type="text" placeholder="Ваше имя" required>
-          <input type="email" placeholder="Email" required>
-          <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
-          <button type="submit" class="btn">Отправить</button>
+          <div class="input-group">
+            <input type="text" placeholder="Ваше имя" required>
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Email" required>
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="input-group">
+            <input type="tel" placeholder="Телефон" required>
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="input-group">
+            <textarea placeholder="Комментарий или пожелания" rows="4"></textarea>
+            <i class="fas fa-comment"></i>
+          </div>
+          <button type="submit" class="btn">Записаться</button>
         </form>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
   <!-- Футер -->
@@ -164,6 +185,7 @@
 
 </body>
 </html>
+
 
 
 
