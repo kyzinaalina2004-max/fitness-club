@@ -366,21 +366,74 @@ body {
 }
 /* ... твои предыдущие стили ... */
 
-/* ================================= */
-/*         АДАПТИВНЫЙ МЕНЮ           */
-/* ================================= */
+/* =============================== */
+/*        БЛОК ЗАПИСИ             */
+/* =============================== */
+.signup {
+  padding: 4rem 0;
+  background: #f9f9f9;
+}
 
-/* твои стили для меню */
+.signup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
 
-/* ================================= */
-/*        ДРУГИЕ СЕКЦИИ              */
-/* ================================= */
+.signup-info p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
 
-/* твои стили для галереи, тренеров и т.д. */
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-/* ================================= */
-/*        НОВЫЙ БЛОК ЗАПИСИ          */
-/* ================================= */
+.signup-form input,
+.signup-form textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-form button.btn {
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f39c12, #d35400);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.signup-form button.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .signup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-form button.btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 
 
