@@ -434,6 +434,18 @@ body {
   }
 }
 
+/* =============================== */
+/*        цитаты            */
+/* =============================== */
+#dynamic-slogan {
+  font-size: 1.4rem;
+  color: #f39c12;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  min-height: 1.5em; /* Чтобы блок не прыгал */
+  text-align: center;
+}
+
 
 
 
