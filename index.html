@@ -67,6 +67,49 @@
     </div>
   </section>
 
+  <!-- Раздел: Статистика -->
+<section id="stats" class="stats">
+  <div class="container">
+    <h2 class="section-title">Почему выбирают <span>FitLife</span></h2>
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <h3>Опыт тренеров</h3>
+        <div class="progress-bar" data-percent="8">
+          <span class="progress-fill"></span>
+        </div>
+        <p><span class="count" data-target="8">0</span> лет</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Успешных клиентов</h3>
+        <div class="progress-bar" data-percent="90">
+          <span class="progress-fill"></span>
+        </div>
+        <p><span class="count" data-target="1200">0</span>+</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Современные тренажеры</h3>
+        <div class="progress-bar" data-percent="95">
+          <span class="progress-fill"></span>
+        </div>
+        <p><span class="count" data-target="95">0</span>%</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Удовлетворенных клиентов</h3>
+        <div class="progress-bar" data-percent="98">
+          <span class="progress-fill"></span>
+        </div>
+        <p><span class="count" data-target="98">0</span>%</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
   <!-- Галерея -->
   <section id="gallery" class="gallery">
     <div class="container">
@@ -188,8 +231,42 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const stats = document.querySelectorAll(".stat-card");
+  const options = { threshold: 0.5 };
+
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const progress = entry.target.querySelector(".progress-fill");
+        const percent = entry.target.querySelector(".progress-bar").dataset.percent;
+        progress.style.width = percent + "%";
+
+        const countEl = entry.target.querySelector(".count");
+        const target = +countEl.dataset.target;
+        let count = 0;
+        const step = target / 100;
+        const interval = setInterval(() => {
+          count += step;
+          if(count >= target){
+            count = target;
+            clearInterval(interval);
+          }
+          countEl.innerText = Math.round(count);
+        }, 20);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  stats.forEach(stat => observer.observe(stat));
+});
+</script>
+
 </body>
 </html>
+
 
 
 
