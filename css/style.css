@@ -496,6 +496,36 @@ body {
   margin: 0;
 }
 
+/* Tooltip для ячеек расписания */
+.schedule-table td {
+  position: relative;
+  cursor: pointer;
+}
+
+.schedule-table td::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: 125%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.schedule-table td:hover::after {
+  opacity: 1;
+  bottom: 135%;
+}
+
+
 
 
 
