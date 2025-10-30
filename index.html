@@ -15,14 +15,16 @@
     <div class="container">
       <div class="logo">🏋️ FitLife</div>
       <nav>
-        <ul class="nav-links">
-          <li><a href="#hero" class="active">Главная</a></li>
-          <li><a href="#features">Преимущества</a></li>
-          <li><a href="#gallery">Галерея</a></li>
-          <li><a href="trainers.html">Тренеры</a></li>
-          <li><a href="#contact">Контакты</a></li>
-        </ul>
-      </nav>
+  <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  <ul class="nav-links">
+    <li><a href="#hero" class="active">Главная</a></li>
+    <li><a href="#features">Преимущества</a></li>
+    <li><a href="#gallery">Галерея</a></li>
+    <li><a href="trainers.html">Тренеры</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+</nav>
+
     </div>
   </header>
 
@@ -174,6 +176,16 @@
       <p>Разработано с ❤️ для спортивных людей</p>
     </div>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+});
+</script>
 
 </body>
 </html>
@@ -181,5 +193,6 @@
 
 </body>
 </html>
+
 
 
