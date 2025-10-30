@@ -213,39 +213,31 @@ body {
 /* ================================= */
 .contact {
   padding: 4rem 0;
-  background: #f9f9f9; /* мягкий фон */
-  text-align: center;
+  background: #fff;
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* две колонки на десктопе */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  align-items: start;
   margin-top: 2rem;
 }
 
 .contact-info p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
-  color: #333;
-  line-height: 1.6;
+  color: #555;
 }
 
 .contact-info i {
   color: #f39c12;
   margin-right: 10px;
-  font-size: 1.2rem;
 }
 
 .contact-form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input,
@@ -255,13 +247,6 @@ body {
   border: 1px solid #ccc;
   font-size: 1rem;
   width: 100%;
-  transition: border 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #f39c12;
 }
 
 .contact-form button {
@@ -273,7 +258,7 @@ body {
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .contact-form button:hover {
@@ -281,18 +266,21 @@ body {
   transform: scale(1.05);
 }
 
-/* Мобильная адаптация */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr; /* одна колонка */
-    gap: 1.5rem;
-  }
-
-  .contact-form button {
-    width: 100%;
-    text-align: center;
-  }
+/* ================================= */
+/*             ПОДВАЛ               */
+/* ================================= */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
 }
+
+.footer p {
+  margin: 0.3rem 0;
+}
+
 
 
 /* ================================= */
