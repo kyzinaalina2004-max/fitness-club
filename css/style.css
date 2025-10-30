@@ -522,6 +522,48 @@ html, body {
   overflow-x: auto;
   width: 100%;
 }
+/* =============================== */
+/*     АДАПТИВНОЕ МЕНЮ (МОБИЛЬНОЕ) */
+/* =============================== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    display: none; /* скрыто по умолчанию */
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex; /* показываем, когда нажата кнопка */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  /* Кнопка-бургер */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #fff;
+  }
+
+  nav {
+    position: relative;
+  }
+}
+
+/* На больших экранах бургер скрыт */
+.menu-toggle {
+  display: none;
+}
+
 
 
 
